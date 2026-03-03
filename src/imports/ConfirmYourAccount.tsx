@@ -33,6 +33,8 @@ function Password({ value, onChange, onKeyDown, inputRef, disabled }: {
           <input
             ref={inputRef}
             type="text"
+            inputMode="numeric"
+            pattern="[0-9]*"
             maxLength={1}
             value={value}
             onChange={(e) => onChange(e.target.value)}
@@ -209,7 +211,7 @@ function OtPs() {
 
 function Frame1() {
   return (
-    <div className="relative md:absolute content-stretch flex flex-col gap-8 md:gap-[52px] items-start w-full max-w-[312px] px-4 py-6 md:p-0 md:left-[222px] md:top-[264px] md:w-[312px] md:max-w-[312px] translate-y-0 min-[426px]:-translate-y-[80px] md:translate-y-0">
+    <div className="relative md:absolute content-stretch flex flex-col gap-8 md:gap-[52px] items-start w-full max-w-[312px] px-4 py-6 md:p-0 md:left-[222px] md:top-[264px] md:w-[312px] md:max-w-[312px] -translate-y-[50px] min-[426px]:-translate-y-[80px] md:translate-y-0">
       <Title />
       <OtPs />
     </div>
@@ -251,8 +253,21 @@ function Content2() {
 }
 
 export default function ConfirmYourAccount() {
+  useEffect(() => {
+    const isMobile = () => window.matchMedia('(max-width: 767px)').matches;
+    if (isMobile()) {
+      const prev = document.body.style.overflow;
+      document.body.style.overflow = 'hidden';
+      document.documentElement.style.overflow = 'hidden';
+      return () => {
+        document.body.style.overflow = prev;
+        document.documentElement.style.overflow = '';
+      };
+    }
+  }, []);
+
   return (
-    <div className="relative size-full min-h-[100dvh] min-w-full" data-name="confirm your account" style={{ backgroundImage: "linear-gradient(rgb(202, 95, 22) 0%, rgb(220, 104, 24) 25%, rgb(233, 125, 53) 50%, rgb(241, 172, 126) 75%, rgb(249, 220, 200) 100%), linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%)" }}>
+    <div className="relative size-full min-h-[100dvh] min-w-full h-[100dvh] overflow-hidden md:overflow-visible md:h-auto" data-name="confirm your account" style={{ backgroundImage: "linear-gradient(rgb(202, 95, 22) 0%, rgb(220, 104, 24) 25%, rgb(233, 125, 53) 50%, rgb(241, 172, 126) 75%, rgb(249, 220, 200) 100%), linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%)" }}>
       <Content />
       <Content2 />
     </div>
