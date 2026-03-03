@@ -267,7 +267,7 @@ export default function ConfirmYourAccount() {
   }, []);
 
   return (
-    <div className="relative size-full min-h-[100dvh] min-w-full h-[100dvh] overflow-hidden md:overflow-visible md:h-auto" data-name="confirm your account" style={{ backgroundImage: "linear-gradient(rgb(202, 95, 22) 0%, rgb(220, 104, 24) 25%, rgb(233, 125, 53) 50%, rgb(241, 172, 126) 75%, rgb(249, 220, 200) 100%), linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%)" }}>
+    <div className="relative size-full min-h-[100dvh] min-h-[100svh] min-w-full h-[100dvh] h-[100svh] overflow-hidden md:overflow-visible md:h-auto md:min-h-0" data-name="confirm your account" style={{ backgroundImage: "linear-gradient(rgb(202, 95, 22) 0%, rgb(220, 104, 24) 25%, rgb(233, 125, 53) 50%, rgb(241, 172, 126) 75%, rgb(249, 220, 200) 100%), linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%)" }}>
       <Content />
       <Content2 />
     </div>

@@ -129,6 +129,9 @@
   #root {
     height: 100%;
     min-height: 100vh;
+    /* Fill viewport on iPhone / mobile: dynamic viewport + iOS Safari fix */
+    min-height: 100dvh;
+    min-height: -webkit-fill-available;
   }
 
   body {
@@ -142,6 +145,7 @@
 
   html {
     font-size: var(--font-size);
+    height: -webkit-fill-available;
   }
 
   h1 {
