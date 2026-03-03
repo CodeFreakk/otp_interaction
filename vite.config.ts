@@ -22,6 +22,8 @@ function figmaAssetPlugin() {
 }
 
 export default defineConfig({
+  root: path.resolve(__dirname),
+  base: process.env.VITE_BASE ?? './',
   plugins: [
     figmaAssetPlugin(),
     // The React and Tailwind plugins are both required for Make, even if
@@ -33,6 +35,11 @@ export default defineConfig({
     alias: {
       // Alias @ to the src directory
       '@': path.resolve(__dirname, './src'),
+    },
+  },
+  build: {
+    rollupOptions: {
+      input: path.resolve(__dirname, 'index.html'),
     },
   },
 })
