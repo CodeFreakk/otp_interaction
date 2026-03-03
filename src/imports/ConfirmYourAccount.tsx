@@ -7,7 +7,7 @@ const HERO_IMAGE_SRC = "/hero-image.png";
 function Title() {
   return (
     <div className="content-stretch flex flex-col gap-[4px] items-start justify-center not-italic relative shrink-0 text-left w-full" data-name="Title">
-      <p className="css-4hzbpn font-bold leading-[32px] min-w-full relative shrink-0 text-[#171717] text-[22px] w-[min-content] text-left font-gooper" style={{ fontFeatureSettings: "'calt' 0, 'liga' 0" }}>
+      <p className="css-4hzbpn font-['Gooper',sans-serif] font-bold leading-[32px] min-w-full relative shrink-0 text-[#171717] text-[22px] w-[min-content] text-left" style={{ fontFeatureSettings: "'calt' 0, 'liga' 0" }}>
         Confirm your account
       </p>
       <p className="css-4hzbpn font-['Inter',sans-serif] font-normal leading-[24px] relative shrink-0 text-[#5c5c5c] text-[15px] tracking-[0.1px] w-full max-w-[274px] text-left" style={{ fontFeatureSettings: "'ss11', 'calt' 0, 'liga' 0" }}>
@@ -267,7 +267,7 @@ export default function ConfirmYourAccount() {
   }, []);
 
   return (
-    <div className="relative size-full min-h-[100dvh] min-h-[100svh] min-w-full h-[100dvh] h-[100svh] overflow-hidden md:overflow-visible md:h-auto md:min-h-0" data-name="confirm your account" style={{ backgroundImage: "linear-gradient(rgb(202, 95, 22) 0%, rgb(220, 104, 24) 25%, rgb(233, 125, 53) 50%, rgb(241, 172, 126) 75%, rgb(249, 220, 200) 100%), linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%)" }}>
+    <div className="relative size-full min-h-[100dvh] min-w-full h-[100dvh] overflow-hidden md:overflow-visible md:h-auto" data-name="confirm your account" style={{ backgroundImage: "linear-gradient(rgb(202, 95, 22) 0%, rgb(220, 104, 24) 25%, rgb(233, 125, 53) 50%, rgb(241, 172, 126) 75%, rgb(249, 220, 200) 100%), linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%)" }}>
       <Content />
       <Content2 />
     </div>
