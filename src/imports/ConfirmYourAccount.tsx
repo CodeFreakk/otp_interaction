@@ -7,7 +7,7 @@ const HERO_IMAGE_SRC = "/hero-image.png";
 function Title() {
   return (
     <div className="content-stretch flex flex-col gap-[4px] items-start justify-center not-italic relative shrink-0 text-left w-full" data-name="Title">
-      <p className="css-4hzbpn font-['Gooper',sans-serif] font-bold leading-[32px] min-w-full relative shrink-0 text-[#171717] text-[22px] w-[min-content] text-left" style={{ fontFeatureSettings: "'calt' 0, 'liga' 0" }}>
+      <p className="css-4hzbpn font-bold leading-[32px] min-w-full relative shrink-0 text-[#171717] text-[22px] w-[min-content] text-left font-gooper" style={{ fontFeatureSettings: "'calt' 0, 'liga' 0" }}>
         Confirm your account
       </p>
       <p className="css-4hzbpn font-['Inter',sans-serif] font-normal leading-[24px] relative shrink-0 text-[#5c5c5c] text-[15px] tracking-[0.1px] w-full max-w-[274px] text-left" style={{ fontFeatureSettings: "'ss11', 'calt' 0, 'liga' 0" }}>
